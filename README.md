@@ -1,4 +1,19 @@
 # OOQ: Object-oriented Query language
+  # Requirement
+    #1 Implement language
+      Javascript (>=ES6)
+      Python     (>=3.7)
+      [...]
+      
+    #2.Operator Overloading
+      [...]
+      
+    #3.Multi-langguage context compiler
+      var list    = [1,2,3]; //native list
+      var sqlList = #query(table.filter(t=>t.id>0)); //query context
+      var pyList  = #python([ a for a in list if a%2==0 ]); //python context 
+      [...]
+    
   # Prototype 
     #A SELECT
     #1.code: table.filter( tbl=>tbl.id > 0)
@@ -21,3 +36,7 @@
       
     #7.code: table.filter( tbl=>tbl.id > 0).join(table2,tbls=>tbls[0].refId=tbls[1].id)
       =>sql : SELECT * FROM table JOIN table2 ON table.refId = table2.id WHERE table.id >0 LIMIT 1,3 
+      [...]
+    
+  # Features
+      [...]
